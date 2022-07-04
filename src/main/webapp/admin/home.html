@@ -1,0 +1,272 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+    <script src="asser1/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/utils.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" >
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+	<script>
+	 $(function(){
+		 validator();
+	 })
+	</script>
+	
+
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- <h1 style="">Admin</h1> -->
+                <!-- <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> -->
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse mt-3">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    <h3 class="menu-title">Cars</h3><!-- /.menu-title -->
+                    <li>
+                        <a href="displayCars.html"> <i class="menu-icon fa-solid fa-car-side"></i> Display Cars </a>
+                    </li>
+                    <li>
+                        <a href="addCars.html"> <i class="menu-icon fa-solid fa-plus"></i> Add Cars </a>
+                    </li>
+                    <li>
+                        <a href="viewCars.html"> <i class="menu-icon fa-solid fa-eye"></i> View Cars </a>
+                    </li>
+                    <li>
+                        <a href="soldCars.html"> <i class="menu-icon fa-solid fa-eye"></i> Sold Cars </a>
+                    </li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <h2>Admin Panel</h2>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Welcome to admin page</h1>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="content mt-3">
+
+            
+            <div class="col-xl-4 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
+                            <div class="stat-content dib">
+                                <div class="stat-text">Total Cars</div>
+                                <div class="stat-digit totalCars"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-4 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon dib"><i class="ti-money text-success border-success"></i></div>
+                            <div class="stat-content dib">
+                                <div class="stat-text">Sold Cars</div>
+                                <div class="stat-digit soldCars"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon dib"><i class="ti-layout-grid2 text-warning border-warning"></i></div>
+                            <div class="stat-content dib">
+                                <div class="stat-text">Active Cars</div>
+                                <div class="stat-digit activeCars"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12 mb-4">
+                <div class="card-group">
+                    <div class="card col-lg-3 col-md-6 mr-2 bg-flat-color-1">
+                        <div class="card-body">
+                            <div class="h1 text-muted text-right mb-4">
+                                <i class="fa fa-car text-light"></i>
+                            </div>
+        
+                            <a href="addCars.html">
+                            <small class="text-uppercase font-weight-bold text-light">ADD CARS</small></a>
+                            <div class="progress progress-xs mt-3 mb-0 bg-light" style="width: 40%; height: 5px;"></div>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 mr-2 no-padding no-shadow">
+                        <div class="card-body bg-flat-color-3">
+                            <div class="h1 text-right mb-4">
+                                <i class="fa fa-cart-plus text-light"></i>
+                            </div>
+                            <div class="h4 mb-0 text-light">
+                            </div>
+                            <small class="text-light text-uppercase font-weight-bold">Products sold</small>
+                            <div class="progress progress-xs mt-3 mb-0 bg-light" style="width: 40%; height: 5px;"></div>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 no-padding no-shadow">
+                        <div class="card-body bg-flat-color-5">
+                            <div class="h1 text-right text-light mb-4">
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <div class="h4 mb-0 text-light">
+                           </div>
+                            <small class="text-uppercase font-weight-bold text-light">View Cars</small>
+                            <div class="progress progress-xs mt-3 mb-0 bg-light" style="width: 40%; height: 5px;"></div>
+                        </div>
+                    </div>
+                   
+                </div>
+        
+            </div>
+
+        </div> <!-- .content -->
+    </div><!-- /#right-panel -->
+
+
+    <!-- Right Panel -->
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+            loadfirst();
+        })(jQuery);
+        
+        function loadfirst(){
+        	
+        $.ajax({
+    		url: "adminhome",
+    		type: "POST",
+    		
+    		success: function(result) {
+    			let data = JSON.parse(result);
+    			$(".totalCars").text(data.total);
+    			$(".activeCars").text(data.active);
+    			$(".soldCars").text(data.sold);
+    		}
+    	});
+
+        }
+    </script>
+
+</body>
+
+</html>

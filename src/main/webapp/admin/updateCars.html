@@ -1,0 +1,366 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Update Cars</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+
+
+    <link rel="stylesheet" href="vendors/chosen/chosen.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="assets/js/utils.js"></script>
+<script>
+	 $(function(){
+		 validator();
+	 })
+	</script>
+</head>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- <h1 style="">Admin</h1> -->
+                <!-- <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> -->
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse mt-3">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    <h3 class="menu-title">Cars</h3><!-- /.menu-title -->
+                    <li>
+                        <a href="displayCars.html"> <i class="menu-icon fa-solid fa-car-side"></i> Display Cars </a>
+                    </li>
+                    <li>
+                        <a href="addCars.html"> <i class="menu-icon fa-solid fa-plus"></i> Add Cars </a>
+                    </li>
+                    <li>
+                        <a href="viewCars.html"> <i class="menu-icon fa-solid fa-eye"></i> View Cars </a>
+                    </li>
+                    <li>
+                        <a href="soldCars.html"> <i class="menu-icon fa-solid fa-eye"></i> Sold Cars </a>
+                    </li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <h2>Add Cars</h2>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">Add Cars</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+
+                <div class="row">
+
+                    <div class="col-xs-6 col-sm-6">
+                        <div class="card">
+                            <!-- <div class="card-header">
+                                <strong>Masked Input</strong> <small> Small Text Mask</small>
+                            </div> -->
+                            <div class="card-body card-block">
+                                <div class="form-group">
+                                    <label class="form-control-label">Car Name</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-car"></i></div>
+                                        <input type="text" class="form-control" id="carname">
+                                    </div>
+                                    <!-- <small class="form-text text-muted">ex. </small> -->
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title">Brand</strong>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <select data-placeholder="Choose a Country..." class="standardSelect"
+                                            tabindex="1" id="brand">
+                                            <option selected value="">--Select Cars--</option>
+                                            <option value="AUDI">Audi</option>
+                                            <option value="BMW">BMW</option>
+                                            <option value="MERCEDES">Mercedes Benz</option>
+                                            <option value="SKODA">Skoda</option>
+                                            <option value="LAND ROVER">Land Rover</option>
+                                            <option value="MINI">Mini</option>
+                                            <option value="PORSCHE">Porsche</option>
+                                            <option value="JAGUAR">Jaguar</option>
+                                            <option value="RANGE ROVER">Range Rover</option>
+                                            <option value="VOLVO">Volvo</option>
+                                            <option value="JEEP">Jeep</option>
+                                            <option value="KIA">KIA</option>
+                                            <option value="HYUNDAI">Hyundai</option>
+                                            <option value="TOYOTA">Toyota</option>
+                                            <option value="LEXUS">LEXUS</option>
+                                            <option value="MAHINDRA">Mahindra</option>
+                                            <option value="FORD">Ford</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title">Model</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <select data-placeholder="Choose a Country..." class="standardSelect"
+                                            tabindex="1" id="model">
+                                            <option selected value="">--Select Model--</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class=" form-control-label">Price</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa-solid fa-indian-rupee-sign"></i>
+                                        </div>
+                                        <input class="form-control" id="prod-price">
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title">Transmission Type</strong>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <select data-placeholder="" class="standardSelect" tabindex="1" id="transmission">
+                                            <option selected>--Select Transmission--</option>
+                                            <option value="AUTOMATIC">Automatic</option>
+                                            <option value="MANUAL">Manual</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong class="card-title">Fuel Type</strong>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <select data-placeholder="" class="standardSelect" tabindex="1" id="fuel">
+                                            <option value="null">--Select Fuel--</option>
+                                            <option value="PETROL">Petrol</option>
+                                            <option value="DIESEL">Diesel</option>
+                                            <option value="ELECTRIC">Electric</option>
+                                            <option value="CNG">CNG</option>
+                                            <option value="HYBRID">Hybrid</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label class=" form-control-label">Year</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa-solid fa-calendar"></i></div>
+                                        <input class="form-control" id="year">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class=" form-control-label">Distance Travelled</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa-solid fa-road"></i></div>
+                                        <input class="form-control" id="distanceTraveled">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class=" form-control-label">Exterior colour</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa-solid fa-palette"></i></div>
+                                        <input class="form-control" id="extColour">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class=" form-control-label">Interior colour</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa-solid fa-palette"></i></div>
+                                        <input class="form-control" id="intColour">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class=" form-control-label">Seating</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa-regular fa-chair"></i></div>
+                                        <input class="form-control" id="seats">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6">
+
+                        <div class="mb-3">
+                        	<img class="image_1" width="300px" height="300px">
+                            <label for="formFile" class="form-label">Image 1</label>
+                            <input class="form-control image_1" onchange="encodeImageFileAsURL(this)" type="file" id="formFile">
+                          </div>
+                          <div class="mb-3">
+                          	<img class="image_2" width="300px" height="300px">
+                            <label for="formFile" class="form-label">Image 2</label>
+                            <input class="form-control image_2" onchange="encodeImageFileAsURL(this)" type="file" id="formFile">
+                          </div>
+                          <div class="mb-3">
+                          <img class="image_3" width="300px" height="300px">
+                            <label for="formFile" class="form-label">Image 3</label>
+                            <input class="form-control image_3" onchange="encodeImageFileAsURL(this)" type="file" id="formFile">
+                          </div>
+                          <div class="mb-3">
+                          	<img class="image_4" width="300px" height="300px">
+                            <label for="formFile" class="form-label">Image 4</label>
+                            <input class="form-control image_4" onchange="encodeImageFileAsURL(this)" type="file" id="formFile">
+                          </div>
+                          <div class="mb-3">
+                          <img class="image_5" width="300px" height="300px">
+                            <label for="formFile" class="form-label">Image 5</label>
+                            <input class="form-control image_5" onchange="encodeImageFileAsURL(this)" type="file" id="formFile">
+                          </div>
+
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Description</label>
+                            <textarea class="form-control" id="prod-description" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Finance</label>
+                            <textarea class="form-control" id="prod-finance" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Why Buy from us</label>
+                            <textarea class="form-control" id="prod-buyfromus" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Warrenty</label>
+                            <textarea class="form-control" id="prod-warrenty" rows="5"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary align-self-center mb-2">Submit</button>
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="vendors/chosen/chosen.jquery.min.js"></script>
+    <script src="asser1/js/jquery.min.js"></script>
+    <script src="assets/js/updateCars.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            jQuery(".standardSelect").chosen({
+                disable_search_threshold: 10,
+                no_results_text: "Oops, nothing found!",
+                width: "100%"
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

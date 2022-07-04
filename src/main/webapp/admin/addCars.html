@@ -1,0 +1,488 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Add Cars</title>
+<meta name="description" content="Sufee Admin - HTML5 Admin Template">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" href="apple-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+
+<link rel="stylesheet"
+	href="vendors/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="vendors/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="vendors/themify-icons/css/themify-icons.css">
+<link rel="stylesheet"
+	href="vendors/flag-icon-css/css/flag-icon.min.css">
+<link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+
+<link rel="stylesheet" href="vendors/chosen/chosen.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="asser1/js/jquery.min.js"></script>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800'
+	rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="assets/js/utils.js"></script>
+<script>
+	 $(function(){
+		 validator();
+	 })
+	</script>
+</head>
+
+<body>
+	<!-- Left Panel -->
+
+	<aside id="left-panel" class="left-panel">
+		<nav class="navbar navbar-expand-sm navbar-default">
+
+			<div class="navbar-header">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#main-menu" aria-controls="main-menu"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fa fa-bars"></i>
+				</button>
+				<!-- <h1 style="">Admin</h1> -->
+				<!-- <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> -->
+			</div>
+
+			<div id="main-menu" class="main-menu collapse navbar-collapse mt-3">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html"> <i
+							class="menu-icon fa fa-dashboard"></i>Dashboard
+					</a></li>
+					<h3 class="menu-title">Cars</h3>
+					<!-- /.menu-title -->
+					<li><a href="displayCars.html"> <i
+							class="menu-icon fa-solid fa-car-side"></i> Display Cars
+					</a></li>
+					<li><a href="addCars.html"> <i
+							class="menu-icon fa-solid fa-plus"></i> Add Cars
+					</a></li>
+					<li><a href="viewCars.html"> <i
+							class="menu-icon fa-solid fa-eye"></i> View Cars
+					</a></li>
+					<li><a href="soldCars.html"> <i
+							class="menu-icon fa-solid fa-eye"></i> Sold Cars
+					</a></li>
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</nav>
+	</aside>
+	<!-- /#left-panel -->
+
+	<!-- Left Panel -->
+
+	<!-- Right Panel -->
+
+	<div id="right-panel" class="right-panel">
+
+		<!-- Header-->
+		<header id="header" class="header">
+
+			<div class="header-menu">
+
+				<div class="col-sm-7">
+					<a id="menuToggle" class="menutoggle pull-left"><i
+						class="fa fa fa-tasks"></i></a>
+					<div class="header-left">
+						<h2>Add Cars</h2>
+					</div>
+				</div>
+
+				<div class="col-sm-5">
+					<div class="user-area dropdown float-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"> <img
+							class="user-avatar rounded-circle" src="images/admin.jpg"
+							alt="User Avatar">
+						</a>
+
+						<div class="user-menu dropdown-menu">
+
+							<a class="nav-link" href="#"><i class="fa fa-power-off"></i>
+								Logout</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</header>
+		<!-- /header -->
+
+		<div class="breadcrumbs">
+			<div class="col-sm-4">
+				<div class="page-header float-left">
+					<div class="page-title"></div>
+				</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="page-header float-right">
+					<div class="page-title">
+						<ol class="breadcrumb text-right">
+							<li><a href="#">Dashboard</a></li>
+							<li class="active">Add Cars</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content mt-3">
+			<div class="animated fadeIn">
+
+				<div class="row">
+
+					<div class="col-xs-6 col-sm-6">
+						<div class="card">
+							<!-- <div class="card-header">
+                                <strong>Masked Input</strong> <small> Small Text Mask</small>
+                            </div> -->
+							<div class="card-body card-block">
+								<div class="form-group">
+									<label class="form-control-label">Car Name</label>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa fa-car"></i>
+										</div>
+										<input type="text" class="form-control" id="carName" required>
+									</div>
+									<!-- <small class="form-text text-muted">ex. </small> -->
+								</div>
+								<div class="card">
+									<div class="card-header">
+										<strong class="card-title">Brand</strong>
+									</div>
+									<div class="card-body">
+
+										<select data-placeholder="Choose a Country..."
+											class="standardSelect" tabindex="1" id="brands" required>
+											<option selected value="null">--Select Cars--</option>
+											<option value="Audi">Audi</option>
+											<option value="BMW">BMW</option>
+											<option value="Mercedes">Mercedes Benz</option>
+											<option value="Skoda">Skoda</option>
+											<option value="BMW">Land Rover</option>
+											<option value="Mini">Mini</option>
+											<option value="Porsche">Porsche</option>
+											<option value="Jaguar">Jaguar</option>
+											<option value="Range Rover">Range Rover</option>
+											<option value="Volvo">Volvo</option>
+											<option value="Jeep">Jeep</option>
+											<option value="KIA">KIA</option>
+											<option value="Hyundai">Hyundai</option>
+											<option value="Toyota">Toyota</option>
+											<option value="LEXUS">LEXUS</option>
+											<option value="Mahindra">Mahindra</option>
+											<option value="Ford">Ford</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="card">
+									<div class="card-header">
+										<strong class="card-title">Model</strong>
+									</div>
+									<div class="card-body">
+										<select data-placeholder="Choose a Country..."
+											class="standardSelect" tabindex="1" id="model" required>
+											<option selected value="null">--Select Model--</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class=" form-control-label">Price</label>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa-solid fa-indian-rupee-sign"></i>
+										</div>
+										<input class="form-control" id="price" required>
+									</div>
+
+								</div>
+
+								<div class="card">
+									<div class="card-header">
+										<strong class="card-title">Transmission Type</strong>
+									</div>
+									<div class="card-body">
+
+										<select data-placeholder="" id="transmissionType"
+											class="standardSelect" tabindex="1" required>
+											<option selected value="null">--Select
+												Transmission--</option>
+											<option value="Automatic">Automatic</option>
+											<option value="Manual">Manual</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="card">
+									<div class="card-header">
+										<strong class="card-title">Fuel Type</strong>
+									</div>
+									<div class="card-body">
+
+										<select data-placeholder="" class="standardSelect"
+											id="fuelType" tabindex="1" required>
+											<option value="null">--Select Fuel--</option>
+											<option value="Petrol">Petrol</option>
+											<option value="Diesel">Diesel</option>
+											<option value="Electric">Electric</option>
+											<option value="CNG">CNG</option>
+											<option value="Hybrid">Hybrid</option>
+										</select>
+									</div>
+								</div>
+
+
+
+								<div class="form-group">
+									<label class=" form-control-label">Year</label>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa-solid fa-calendar"></i>
+										</div>
+										<input class="form-control" id="year" required>
+									</div>
+
+								</div>
+								<div class="form-group">
+									<label class=" form-control-label">Distance Travelled</label>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa-solid fa-road"></i>
+										</div>
+										<input class="form-control" id="distanceTravelled" required>
+									</div>
+
+								</div>
+								<div class="form-group">
+									<label class=" form-control-label">Exterior colour</label>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa-solid fa-palette"></i>
+										</div>
+										<input class="form-control" id="exteriorColour" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class=" form-control-label">Interior colour</label>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa-solid fa-palette"></i>
+										</div>
+										<input class="form-control" id="interiorColour" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class=" form-control-label">Seating</label>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa-regular fa-chair"></i>
+										</div>
+										<input class="form-control" id="seating" required>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6">
+
+						<div class="mb-3">
+							<label for="formFile" class="form-label">Image 1</label> <input
+								class="form-control" type="file"
+								onchange="encodeImageFileAsURL(this)" id="image1" required>
+						</div>
+						<div class="mb-3">
+							<label for="formFile" class="form-label">Image 2</label> <input
+								class="form-control" type="file"
+								onchange="encodeImageFileAsURL(this)" id="image2" required>
+						</div>
+						<div class="mb-3">
+							<label for="formFile" class="form-label">Image 3</label> <input
+								class="form-control" type="file"
+								onchange="encodeImageFileAsURL(this)" id="image3" required>
+						</div>
+						<div class="mb-3">
+							<label for="formFile" class="form-label">Image 4</label> <input
+								class="form-control" type="file"
+								onchange="encodeImageFileAsURL(this)" id="image4" required>
+						</div>
+						<div class="mb-3">
+							<label for="formFile" class="form-label">Image 5</label> <input
+								class="form-control" type="file"
+								onchange="encodeImageFileAsURL(this)" id="image5" required>
+						</div>
+
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Description</label>
+							<textarea class="form-control" id="description" rows="5"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Finance</label>
+							<textarea class="form-control" id="finance" rows="5"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Why Buy from us</label>
+							<textarea class="form-control" id="whybuyfromus" rows="5"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Warrenty</label>
+							<textarea class="form-control" id="warrenty" rows="5"></textarea>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="text-center">
+					<button type="button"
+						class="btn btn-primary align-self-center submitbtn mb-2">Submit</button>
+				</div>
+			</div>
+			<!-- .animated -->
+		</div>
+		<!-- .content -->
+
+	</div>
+	<!-- /#right-panel -->
+
+	<!-- Right Panel -->
+
+
+	<script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+	<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="vendors/chosen/chosen.jquery.min.js"></script>
+
+	<script>
+		let image1;
+		let image2;
+		let image3;
+		let image4;
+		let image5;
+
+		jQuery(document).ready(function() {
+			jQuery(".standardSelect").chosen({
+				disable_search_threshold : 10,
+				no_results_text : "Oops, nothing found!",
+				width : "100%"
+			});
+
+			
+		});
+
+		$(document).on('click', ".submitbtn", function() {
+			let carName = $("#carName").val().trim();
+			let brand = $("#brands").val().trim();
+			let model = $("#model").val().trim();
+			let price = $("#price").val().trim();
+			let fuelType = $("#fuelType").val().trim();
+			let transmissionType = $("#transmissionType").val().trim();
+			let year = $("#year").val().trim();
+			let distanceTravelled = $("#distanceTravelled").val().trim();
+			let exteriorColour = $("#exteriorColour").val().trim();
+			let interiorColour = $("#interiorColour").val().trim();
+			let seating = $("#seating").val().trim();
+
+			let description = $("#description").val();
+			let finance = $("#finance").val();
+			let whybuyfromus = $("#whybuyfromus").val();
+			let warrenty = $("#warrenty").val();
+
+			let data = {
+				carName : carName,
+				brand : brand,
+				model : model,
+				fuelType : fuelType,
+				transmissionType : transmissionType,
+				year : year,
+				distanceTravel : distanceTravelled,
+				exteriorColour : exteriorColour,
+				interiorColour : interiorColour,
+				seatingCapacity : seating,
+				description : description,
+				finance : finance,
+				whyBuyFromUs : whybuyfromus,
+				warranty : warrenty,
+				imageBash64_1 : image1,
+			imageBash64_2 : image2,
+			imageBash64_3 : image3,
+			imageBash64_4 : image4,
+			imageBash64_5 : image5,
+	
+			}
+			let value = {data:data,page:"add"}
+			addCars(JSON.stringify(value));
+		});
+
+		function encodeImageFileAsURL(element) {
+			var file = element.files[0];
+			var reader = new FileReader();
+			reader.onloadend = function(e) {
+				e.preventDefault();
+				if (element.id == 'image1') {
+					image1 = reader.result;
+				}
+				if (element.id == 'image2') {
+					image2 = reader.result;
+				}
+				if (element.id == 'image3') {
+					image3 = reader.result;
+				}
+				if (element.id == 'image4') {
+					image4 = reader.result;
+				}
+				if (element.id == 'image5') {
+					image5 = reader.result;
+				}
+			}
+			reader.readAsDataURL(file);
+		}
+
+		function addCars(value) {
+			$.ajax({
+				url : "addProduct",
+				type : "POST",
+				data:{
+					dt:value
+				},
+				success : function(result) {
+					let data = JSON.parse(result);
+					
+				}
+			});
+		}
+	</script>
+
+</body>
+
+</html>
