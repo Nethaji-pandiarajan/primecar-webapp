@@ -31,12 +31,11 @@ public class soldCars extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		JsonArray jsonArray = new JsonArray();
 		try {
-			List<Car> cars = new ProductDAO().soldedCarsList();
-		    for(Car car:cars) {
-		    	JsonElement userJson = g.toJsonTree(car);
-		    	jsonArray.add(userJson);
-		    }
-		    out.println(jsonArray.toString());
+			/*
+			 * List<Car> cars = new ProductDAO().soldedCarsList(); for(Car car:cars) {
+			 * JsonElement userJson = g.toJsonTree(car); jsonArray.add(userJson); }
+			 * out.println(jsonArray.toString());
+			 */
 		} catch (Exception e) {
 			response.setStatus(400);
 			out.print(e.getMessage());
