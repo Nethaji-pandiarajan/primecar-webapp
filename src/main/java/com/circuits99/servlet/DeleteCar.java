@@ -14,7 +14,7 @@ import com.circuits99.dao.ProductDAO;
 /**
  * Servlet implementation class DeleteCar
  */
-@WebServlet("primecarapps.herokuapp.com/admin/deletecar")
+@WebServlet("/primecarapps.herokuapp.com/admin/deletecar")
 public class DeleteCar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

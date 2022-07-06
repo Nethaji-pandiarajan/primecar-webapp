@@ -23,7 +23,7 @@ import com.google.gson.JsonObject;
 /**
  * Servlet implementation class DisplayCars
  */
-@WebServlet("primecarapps.herokuapp.com/admin/displaycars")
+@WebServlet("/primecarapps.herokuapp.com/admin/displaycars")
 public class DisplayCars extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
