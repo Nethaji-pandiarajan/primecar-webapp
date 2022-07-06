@@ -19,7 +19,7 @@ import com.google.gson.JsonElement;
 /**
  * Servlet implementation class HomePageDispalyCars
  */
-@WebServlet("/homedispalyCars")
+@WebServlet("primecarapps.herokuapp.com/homedispalyCars")
 public class HomePageDispalyCars extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
