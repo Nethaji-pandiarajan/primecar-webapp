@@ -25,6 +25,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -49,7 +50,11 @@
 			<artifactId>gson</artifactId>
 			<version>2.9.0</version>
 		</dependency>
-
+		<dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-jdbc</artifactId>
+                <version>9.0.55</version>
+            </dependency>
 	</dependencies>
 	<build>
 		<finalName>primecar-webapp</finalName>
@@ -67,6 +72,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.3</version>
 					<executions>
 						<execution>
 							<phase>package</phase>
@@ -76,9 +82,9 @@
 							<configuration>
 								<artifactItems>
 									<artifactItem>
-										<groupId>com.github.jsimone</groupId>
+										<groupId>com.heroku</groupId>
 										<artifactId>webapp-runner</artifactId>
-										<version>8.0.30.2</version>
+										<version>9.0.13.0</version>
 										<destFileName>webapp-runner.jar</destFileName>
 									</artifactItem>
 								</artifactItems>
