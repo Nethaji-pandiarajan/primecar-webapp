@@ -17,7 +17,7 @@ import com.google.gson.JsonObject;
 /**
  * Servlet implementation class AddProduct
  */
-@WebServlet("/primecarapps.herokuapp.com/admin/addProduct")
+@WebServlet("/admin/addProduct")
 public class AddProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

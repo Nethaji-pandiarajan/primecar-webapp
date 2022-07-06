@@ -15,7 +15,7 @@ import com.google.gson.JsonObject;
 /**
  * Servlet implementation class AdminHome
  */
-@WebServlet("/primecarapps.herokuapp.com/admin/adminhome")
+@WebServlet("/admin/adminhome")
 public class AdminHome extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
