@@ -17,7 +17,6 @@
 		<maven.compiler.source>13</maven.compiler.source>
 		<maven.compiler.target>13</maven.compiler.target>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -25,7 +24,6 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -37,8 +35,6 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.4.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-		<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
 		<dependency>
 			<groupId>jakarta.xml.bind</groupId>
 			<artifactId>jakarta.xml.bind-api</artifactId>
@@ -68,6 +64,9 @@
 					<version>3.0.3</version>
 					<configuration>
 						<appName>${heroku.appName}</appName>
+						<processTypes>
+							<web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.primecarapp</web>
+						</processTypes>
 					</configuration>
 				</plugin>
 				<plugin>
