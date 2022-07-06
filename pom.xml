@@ -59,12 +59,9 @@
 				<plugin>
 					<groupId>com.heroku.sdk</groupId>
 					<artifactId>heroku-maven-plugin</artifactId>
-					<version>3.0.4</version>
+					<version>3.0.3</version>
 					<configuration>
 						<appName>${heroku.appName}</appName>
-						<processTypes>
-							<web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.circuits99.servlet.Index</web>
-						</processTypes>
 					</configuration>
 				</plugin>
 				<plugin>
